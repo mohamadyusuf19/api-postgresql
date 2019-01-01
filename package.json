@@ -1,10 +1,11 @@
 {
-  "name": "server",
-  "version": "0.0.0",
+  "name": "api-stickers",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "test": "(dropdb --if-exists test-cjs-web-store && createdb test-cjs-web-store) && NODE_ENV=test mocha"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
@@ -16,6 +17,9 @@
     "pg": "^7.7.1"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9"
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9",
+    "supertest": "^3.3.0"
   }
 }

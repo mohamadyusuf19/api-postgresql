@@ -10,4 +10,12 @@ module.exports = {
       password: 'Etihad@123'
     }
   },
+  test: {
+    client: 'pg',
+    connection: {
+      database: 'test-cjs-web-store',
+      user:     'postgres',
+      password: 'Etihad@123'
+    }
+  },
 };
